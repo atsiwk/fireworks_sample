@@ -20,6 +20,10 @@ https://codepen.io/makudo/pen/qPrjde 長方形のカラーパレットを動か�
 
 数字を変えてみて試してみると変化がよくわかります。
 
+btn.addEventListener('click', function () {
+  fireworks.push(new Firework(width / 2, -11, 0.90, 146)); ←36行目を変更する
+});
+
 */
 
 var fireworks = [];
@@ -48,7 +52,7 @@ function draw() {
   background(0, 0, 0, 0.1);
 
   // if (random(1) < 0.03) {
-  //   fireworks.push(new Firework());
+  //   fireworks.push(new Firework(random(width), random(-8, -12), 0.9, random(0, 360)));
   // }
 
 
