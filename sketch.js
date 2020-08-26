@@ -33,7 +33,32 @@ var btn = document.getElementById('btn');
 
 // ボタンをクリックしたときの処理
 btn.addEventListener('click', function () {
-  fireworks.push(new Firework(width / 2, -11, 0.90, 146));
+  fireworks.push(new Firework(width / 4, -11, 0.90, 146));
+  fireworks.push(new Firework(2 * width / 4, -11, 0.90, 25));
+  // fireworks.push(new Firework(2 * width / 4, -7, 0.90, 340));
+  fireworks.push(new Firework(3 * width / 4, -11, 0.90, 250));
+
+  setTimeout(function () {
+    fireworks.push(new Firework(2 * width / 4, -11, 0.95, 25));
+    fireworks.push(new Firework(2 * width / 4, -11, 0.95, 80));
+
+    setTimeout(function () {
+      fireworks.push(new Firework(1 * width / 5, -11, 0.88, 100));
+    }, 2000);
+    setTimeout(function () {
+      fireworks.push(new Firework(2 * width / 5, -11, 0.88, 150));
+    }, 2500);
+    setTimeout(function () {
+      fireworks.push(new Firework(3 * width / 5, -11, 0.88, 200));
+    }, 3000);
+    setTimeout(function () {
+      fireworks.push(new Firework(4 * width / 5, -11, 0.88, 250));
+    }, 3500);
+
+  }, 2000);
+
+
+
 });
 
 function setup() {
